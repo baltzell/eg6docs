@@ -1,0 +1,10 @@
+\contentsline {title}{Template Title}{1}{}
+\contentsline {abstract}{Abstract}{1}{}
+\tocdepth@munge 
+\contentsline {section}{\numberline {}Contents}{1}{}
+\tocdepth@restore 
+\contentsline {section}{\numberline {I}Introduction}{1}{}
+\contentsline {section}{\numberline {II}Section 2}{1}{}
+\contentsline {section}{\numberline {III}Conclusion}{1}{}
+\appendix 
+\contentsline {section}{\numberline {A}Template Appendix}{1}{}

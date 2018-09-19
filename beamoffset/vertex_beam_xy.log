@@ -1,0 +1,149 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.2.2)  10 APR 2013 09:22
+entering extended mode
+ %&-line parsing enabled.
+**vertex_beam_xy.tex
+(./vertex_beam_xy.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(./vertex_beam_xy.aux)
+\openout1 = `vertex_beam_xy.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 5.
+LaTeX Font Info:    ... okay on input line 5.
+ (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count88
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count89
+\nofMParguments=\count90
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count91
+\MPscratchDim=\dimen106
+\MPnumerator=\count92
+\everyMPtoPDFconversion=\toks16
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 14.
+ <track_xy.pdf, id=1, 795.97375pt x 686.565pt>
+File: track_xy.pdf Graphic file (type pdf)
+ <use track_xy.pdf> [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<track_xy_close.pdf, id=12, 749.80125pt x 694.595pt>
+File: track_xy_close.pdf Graphic file (type pdf)
+ <use track_xy_close.pdf>
+[2 <./track_xy.pdf>] [3 <./track_xy_close.pdf>]
+<phi_z_eg6.pdf, id=40, 784.9325pt x 676.5275pt>
+File: phi_z_eg6.pdf Graphic file (type pdf)
+ <use phi_z_eg6.pdf>
+<vertex_displacement.pdf, id=41, 495.25739pt x 280.38893pt>
+File: vertex_displacement.pdf Graphic file (type pdf)
+
+<use vertex_displacement.pdf>
+<beam_xy_fix.png, id=42, 713.3049pt x 719.0865pt>
+File: beam_xy_fix.png Graphic file (type png)
+ <use beam_xy_fix.png>
+[4] [5 <./phi_z_eg6.pdf>] [6 <./vertex_displacement.pdf> <./beam_xy_fix.png>]
+<zphi_1gev_fix.png, id=76, 1580.90625pt x 1190.4475pt>
+File: zphi_1gev_fix.png Graphic file (type png)
+ <use zphi_1gev_fix.png>
+[7
+
+ <./zphi_1gev_fix.png>]
+<zelectron_corrected.pdf, id=82, 550.055pt x 488.82625pt>
+File: zelectron_corrected.pdf Graphic file (type pdf)
+
+<use zelectron_corrected.pdf>
+<pos_neg_zvert.pdf, id=83, 488.82625pt x 480.79625pt>
+File: pos_neg_zvert.pdf Graphic file (type pdf)
+ <use pos_neg_zvert.pdf>
+<zphicorr_1gev.png, id=84, 501.875pt x 378.41376pt>
+File: zphicorr_1gev.png Graphic file (type png)
+ <use zphicorr_1gev.png>
+[8] [9 <./zelectron_corrected.pdf>] [10 <./pos_neg_zvert.pdf>] [11 <./zphicorr_
+1gev.png>] (./vertex_beam_xy.aux) ) 
+Here is how much of TeX's memory you used:
+ 971 strings out of 495061
+ 12486 string characters out of 1182622
+ 64666 words of memory out of 3000000
+ 4188 multiletter control sequences out of 15000+50000
+ 8501 words of font info for 30 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 25i,9n,19p,1127b,247s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/c
+m/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pf
+b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
+msy8.pfb>
+Output written on vertex_beam_xy.pdf (11 pages, 866608 bytes).
+PDF statistics:
+ 143 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+

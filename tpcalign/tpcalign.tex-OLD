@@ -1,0 +1,91 @@
+\documentclass[amsmath,amssymb,notitlepage,12pt]{revtex4-1}
+\usepackage{graphicx}
+\usepackage{bm}% bold math
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{verbatim}
+%\usepackage[0.1]{vrsion}
+\graphicspath{{./pics}}
+\begin{document}
+\title{Radial Alignment of the EG6 RTPC\\Version 0.1}
+\author{N. Baltzell}
+\affiliation{Argonne National Laboratory}
+\date{\today}
+\begin{abstract}
+The position of the Radial Time Projection Chamber (RTPC) relative to the EG6 beamline is measured with elastic $^4$He tracks using CLAS's electron as a reference.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+%Recoil nuclei are measured in the RTPC's drift region only a few cm from the beamline.
+Due to the RTPC's small size and proximity to the beamline, combined with a beamline constraint in the track reconstruction, the RTPC's momentum measurement is sensitive to radial misalignment as small as a few-hundred $\mu$m. This results in significant systematic effects on the reconstructed momentum and $\phi$ that vary with the azimuth around the detector.
+%At the kinematics of elastic recoils in EG6's 1.206 GeV data, the effect is a modulation with amplitude of 10\% in momentum and 2.5$^\circ$ in $\phi$ per mm of misalignment.
+
+Measuring a misalignment requires a reference, but the higher energy tracks well-measured by CLAS are below threshold in the RTPC.  Instead of measuring the same track in both detectors, elastic scattering is used where the electron is measured in CLAS and the $^4$He is measured in the RTPC.  This same event selection has also been the basis of both drift paths and gain calibrations of EG6's RTPC \cite{driftpaths,gains}, and those calibration methods have proven sensitive to misalignment.
+
+The method described here to measure the beam position relative to the RTPC is similar to that for measuring the beam position relative to CLAS \cite{clasbeamoffset} in that a beam offset results in a modulation in a reconstructed quantity as a function of $\phi$.  In the latter case, the beam window is the reference and the $z$-vertex reconstructed by CLAS is what modulates, while here it is CLAS's electron's $\phi$ that serves as a reference and the the RTPC's measured $\phi$ and momentum that modulate. 
+
+\section{Motivation}\label{sec:motivation}
+The beamline constraint on each track in the RTPC reconstruction code is implmenented as one additional point in the helix fit with zero weight on its $z$-coordinate.  The effect of the beamline constraint was investigated by simply fitting each track in the real data twice with two different beamline positions.
+
+For tracks at average elastic kinematics, the effect on reconstructed momentum and $\phi$ is shown in Fig. \ref{fig:example_phi} for four different $(x,y)$ beam positions relative to the RTPC axis.   At these kinematics there is no significant effect on the reconstructed values of $z$ and $\theta$. The particlar value of $(1.55$mm$,0.29$mm$)$ is included in Fig. \ref{fig:example_phi} because it was measured in \cite{clasbeamoffset} and then incorrectly used for the beam/RTPC relative alignment, when that was really a measurement of beam/CLAS alignment.
+
+\begin{figure}[htbp]\centering
+    \includegraphics[width=16cm]{pics/offsets_phi}
+    \includegraphics[width=16cm]{pics/offsets_mom}
+    \caption{The effect on reconstructed momentum (top) and $\phi$ (bottom) as a function of the track's $\phi$ of moving the beamline constraint from $(0,0)$ to the position $(x,y)$ shown in mm at the top of each figure.  The data points are for tracks with $p/q=150\pm5$ MeV/c and $\theta=78\pm 3^\circ$.\label{fig:example_phi}}
+\end{figure}
+
+The simple sinusoidal forms of Eq. \ref{eq:phi} and Eq. \ref{eq:mom}, with amplitude and phase that correlate to the beam position relative to the RTPC, are sufficient to describe the effects near elastic kinematics.  The red curves in Fig. \ref{fig:example_phi} are these functional forms fit to the data, and the numbers at the bottom of each plot are the result of the fit.
+\begin{equation}
+    \Delta\phi = \left[\frac{2.56^\circ}{mm}\right] \Bigl(-y_0 \cos\phi + x_0 \sin\phi\Bigr)
+    \label{eq:phi}
+\end{equation}
+\begin{equation}
+    \frac{\Delta p}{p} = \left[\frac{p\sin\theta}{1078\ MeV\cdot mm}\right] \Bigl(-y_0 \cos\phi + x_0 \sin\phi\Bigr)
+    \label{eq:mom}
+\end{equation}
+
+For large momentum and small $\theta$ this parameterization starts to fail not only in amplitude but in the sinusoidal shape.  While it should be possible in the future to find a global function that applies over all kinematics as an ad-hoc correction after the raw data has been processed, it is desireable to determine the correct beam position for the purpose of drift-path and gain calibrations and minimize the necessity of future corrections.
+
+\section{Method}\label{sec:method}
+In order to apply the idea of the Section \ref{sec:motivation}, it is neccessary to measure the modulation reconstructed by the RTPC by comparing with a reference.  Elastic scattering provides a correlated electron measured in CLAS suited for this purpose.  
+The only assumption is that the electron is well-measured and has no $\phi$-oscillation of its own.  This is not unreasonable, as no global sinusoidal $\phi$-dependence of $\phi$ has been observed before in CLAS.  It is also noteworthy that the $\Delta\phi$ distribution between CLAS and RTPC for elastics is largely independent of $z$-vertex in Fig. \ref{fig:dphi_vs_z}, while the electron has traveled through significantly different $\int\vec{B}\cdot \vec{dl}$ of the solenoid field along the target.
+
+\begin{figure}[htbp]\centering
+    \includegraphics[width=8cm]{pics/dphi_z_v9}
+    \caption{The difference between $\phi$ reconstructed from CLAS's electron and RTPC's $^4$He for elastic scattering.  Colors correspond to different $z$-vertex positions over a range of 20 cm.\label{fig:dphi_vs_z}}
+\end{figure}
+
+Using the electron's $\phi$ measured by CLAS as a reference, the oscillation is then attributed entirely to RTPC misalignment.  Figure \ref{fig:dphi_CLAS} shows this for two different settings of the beam offset in the RTPC reconstruction code, $(0,0)$ on left and $(1.55$mm$,0.29$mm$)$ on right.  The plot on the left is data that was also cooked with older drift paths calibration (epass1v5), hence the random spreading away from the expected shape, and so the comparison is not perfect.  Nonetheless, the result from fitting both with Eq. \ref{eq:phi} is a relative offset of $(1.3,0.1)$ between the two plots, which is reasonable for the known offset of $(1.55,0.29)$.
+
+\begin{figure}[htbp]\centering
+    \includegraphics[width=8cm]{pics/CLASRTPC_dphi_phi_epass1v5.png}
+    \includegraphics[width=8cm]{pics/CLASRTPC_dphi_phi_epass1v9.png}
+    \caption{The difference between $\phi$ reconstructed from CLAS's electron and RTPC's $^4$He for elastic scattering for two different beamline constraints.
+    Refer to the text of Section \ref{sec:method} for details.
+    \label{fig:dphi_CLAS}}
+\end{figure}
+
+\section{Results}
+
+The right plot in Fig. \ref{fig:dphi_CLAS} gives the current best estimate of RTPC alignment.  It results in a beam position of $x=0.28$ mm, $y=0.97$ mm relative to the RTPC, after compensating for the offset that was used in the reconstruction.  Then when the elastic RTPC tracks are reconstructed with this new beamline constraint, the result is as expected in Fig. \ref{fig:dphi_CLAS_2} and the modulation is removed.
+
+\begin{figure}[htbp]\centering
+    \includegraphics[width=8cm]{pics/Elasticdphi_vsphi_v11.png}
+    \caption{Same as the right plot in Fig. \ref{fig:dphi_CLAS} after reprocessing the data with a beam offset of $(0.28,0.97)$. \label{fig:dphi_CLAS_2}}
+\end{figure}
+
+Further confirmation of this method is provided by the effect on the momentum, which from Fig. \ref{fig:example_phi} is expected to be significant.  The momentum measured by the RTPC for elastic $^4$He tracks had previously been shifted by over 10\% in one half of the detector relative to the other.  After measuring the beam position relative to the RTPC and applying it in the track reconstruction, the momentum distributions are much more symmetric, shown in the right panel of Fig. \ref{fig:dp_CLAS}.
+
+\begin{figure}[htbp]\centering
+    \includegraphics[width=8cm]{pics/CLASRTPC_dp_phi_epass1v9_precorr.png}
+    \includegraphics[width=8cm]{pics/Elasticmom_v11_2.png}
+    \caption{The momentum distributions for elastic $^4$He measured by the two halves of the RTPC (LEFT/RIGHT).  The figure on left is before the beam offset calibration, while the figure on the right is using the corrected beam offset of $(0.28,0.97)$.\label{fig:dp_CLAS}}
+\end{figure}
+
+
+
+\bibliography{tpcalign}
+\end{document}
+

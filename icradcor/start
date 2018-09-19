@@ -1,0 +1,4 @@
+#!/bin/sh
+stub=icradcor
+gvim $stub.tex &
+zathura $stub.pdf &

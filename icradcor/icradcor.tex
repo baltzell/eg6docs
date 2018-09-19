@@ -1,0 +1,101 @@
+\documentclass[amsmath,amssymb,notitlepage,11pt]{revtex4-1}
+\usepackage{graphicx}
+\usepackage{bm}% bold math
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{verbatim}
+%\usepackage[small,compact]{titlesec}
+%\usepackage{showkeys}
+\addtolength{\textheight}{0.3cm}
+\addtolength{\topmargin}{-0.15cm}
+\addtolength{\textwidth}{0.4cm}
+\addtolength{\hoffset}{-0.2cm}
+\begin{document}
+\hspace*{11.5cm}
+
+\title{Considerations for EG6 IC Energy Radial Dependence}
+%\author{C. Moody, N. Baltzell}
+\affiliation{Argonne National Laboratory}
+\date{\today}
+%\begin{abstract}
+%    Template Abstract.
+%\end{abstract}
+\maketitle
+%\tableofcontents
+\section{Introduction}
+There is clear dependence on the distance of the IC cluster from the beamline of (1) the inclusively reconstructed $\pi^0$ mass, (2) the missing energy and mass in incoherent DVCS, and (3) the missing energy in coherent DVCS.  In each case, correlation with the IC cluster's radial position dominates.  At small radius, all three physics reactions suggest a larger photon energy than measured.  It would be most convincing to reconcile all three simultaneously, and we should understand the cause in order to reliably extend any correction to all energies. 
+
+A loss from shower leakage is expected near the edges of the IC (for which a fiducial cut is already used), but we see a radial dependence even near the middle of the IC.
+In EG6, the EC and SC exhibit a drop in minimum ionizing energy at the same time as reports of instable beam in the online log book.  Corresponding drops in the EC's electron sampling fraction and IC's $\pi^0$ mass have also been measured and ad-hoc run-dependent corrections developed.  Furthermore, a radial dependence on the EC energy has been found to be strongest at the times of these drops.  In previous experiments, the IC gain was shown to be sensitive to beam dose and temperature.
+
+There are at least three possible contributions to the radial dependence: 1) shower leaking out the edges of the IC, 2) a (time-dependent) radiation dose effect from beam splatter similar to that seen in the EC, and 3) background M$\o$ller electrons included in the cluster energy.  A M$\o$ller background would increase the measured energy at small radius, while the other two would decrease it.  While the IC calibration procedure should have accounted for these effects, it is possible that it was performed on a selection of data with stabler than average beam conditions and did not account for dose effect.
+
+\newpage
+\section{Correction}
+Assume that {\it the radial dependence is due to an error on the measured energy in the IC and not the $z$-vertex nor the IC hit positions} (which are used only to construct the photon direction).  We want to derive a IC energy correction function such that the peak in the 2-$\gamma$ invariant mass spectrum is at the correct position of $m_{\pi^0}=135$ MeV:
+\begin{equation}
+    E_1'E_2'=\frac{m^2_{\pi^0}}{1-\cos\theta}.
+    \label{}
+\end{equation}
+
+A general form for the photon energy correction could have a term accounting for fractional energy lost due to shower leakage $A(E,r)$, another fractional energy loss independent of energy due to dose effect on gain $B(r)$, and one constant term accounting for M$\o$ller background $C(r)$,
+\begin{equation}
+E'=\biggr[A(E,r) + B(r)\biggr]E - C(r)
+    \label{}
+\end{equation}
+where $r$ is the distance from the beamline of the IC cluster, and $E$ ($E'$) is the measured (corrected) photon energy.  Based upon the physical motivation, $A$ and $B$ should not be smaller than 1 and $C$ should be positive.
+
+Let's assume the shower leakage depends only on radius and not energy,
+\begin{equation}
+    A(r)=a_0+a_2(r-r_0)^2+a_4(r-r_0)^4,
+    \label{}
+\end{equation}
+the dose effect on gain has a simple parameterization,
+\begin{equation}
+    B(r)=1-e^{-br},
+    \label{}
+\end{equation}
+and the M$\o$ller term is roughly like its cross section:
+\begin{equation}
+    C(r)=ce^{-r/1.1}.
+    \label{}
+\end{equation}
+%Then
+%\begin{equation}
+%    E'=\biggr[\sum_{i=0}^na_ir^i+b/r^2\biggr]-ce^{r/1.1}.
+%    \label{}
+%\end{equation}
+%The M$\o$ller background should be independent of cluster energy and just a constant subtraction from the real photon energy dependent only on radius.  The leakage term $\alpha$ could well be dependent on energy.
+Let's define also the assumed errorless quantity $K\equiv\frac{m_{\pi^0}^2}{1-\cos\theta}$.
+\newpage
+\subsection{$2^{nd}$ Photon on Plateau}
+If the 2$^{nd}$ photon is in the radial range where the measured $\pi^0$ mass is flat, we assume the 2$^{nd}$ photon's energy is correctly measured, $E_2'=E_2$.
+Then,
+\begin{equation}
+    \frac{K}{E_1E_2}=A(r_1)+B(r_1)
+    \label{}
+\end{equation}
+and plotting the left side as a function of $r$ will allow fitting the parameters to the data.
+%\subsection{Equal Energies}
+%If the energies of the two photons are the same, then
+
+\subsection{Equal Radii}
+If the radii of the two photons are then same, then
+\begin{equation}
+    \sqrt{\frac{K}{E_1E_2}}=A(r)+B(r)
+    \label{}
+\end{equation}
+
+\subsection{Equality}
+If the energies {\it and} radii of the two photons are the same, then
+
+\begin{equation}
+    \left[\alpha(E_1,r_1)\cdot E_1-\beta(r_1)\right]\left[\alpha(E_2,r_2)\cdot E_2-\beta(r_2)\right]=\frac{m^2_{\pi^0}}{1-\cos\theta}.
+    \label{}
+\end{equation}
+
+
+
+\bibliography{template}%.bib
+\end{document}
+
